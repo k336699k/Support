@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="dbxsd/dataset.xsd">
+
+    
+    
+    <organization org_id="1" org_name="org_nameTest1" org_description="org_descriptionTest1"/>
+
+    <specialization id="1" name="specializationTest1"/>
+    
+    <specialization id="2" name="specializationTest2"/>
+    
+    <category_service id="1" name="category_serviceTest1" company_id="1" specialization_id="1"/>
+    
+    <category_service id="2" name="category_serviceTest2" company_id="1" specialization_id="2"/>
+    
+    <subcategory_service id="1" name="subcategory_serviceTest1" category_id="1"/>
+    
+    <subcategory_service id="2" name="subcategory_serviceTest2" category_id="2"/>
+
+
+	<services id="1" category_id="1" subcategory_id="1" name="serviceTest1" description="Test description 1"
+	price_from="1.0" price_to="1.0" currency="currencyTest1" duration="1" break_between_sessions="1" 
+	online_record="true" electronic_payment="true" group_record="true" group_record_number="1" record_is_available="true"
+	/>
+	
+	<services id="2" category_id="2" subcategory_id="2" name="serviceTest2" description="Test description 2"
+	price_from="2.0" price_to="2.0" currency="currencyTest2" duration="2" break_between_sessions="2" 
+	online_record="false" electronic_payment="false" group_record="false" group_record_number="2" record_is_available="false"
+	/>
+	
+	<service_shedules id="1" record_is_available_from="01:01:01" 
+	record_is_available_to="02:02:02" day="MONDAY" service_id="1"/>
+	
+	<service_shedules id="2" record_is_available_from="03:03:03" 
+	record_is_available_to="04:04:04" day="TUESDAY" service_id="2"/>
+	
+	<employee id="1" date_of_birth="01-01-2001" description="description test" email="test@mail.ru" 
+    last_name="LastNameTest" middle_name="MiddleNameTest" name="NameTest" phone_number="+375291234567"
+    company_id="1" />
+    
+    <employee id="2" date_of_birth="01-01-2001" description="description test2" email="test2@mail.ru" 
+    last_name="LastNameTest2" middle_name="MiddleNameTest2" name="NameTest2" phone_number="+3752912345672"
+    company_id="1" /> 
+    
+    <employee_specialization employee_id="1" specialization_id="1"/>
+    
+    <employee_specialization employee_id="2" specialization_id="1"/>
+    <employee_specialization employee_id="2" specialization_id="2"/>
+    	
+    <company id="1" category="categoryTest1" description="descriptionTest1" name="CompanyTest1"
+    rating="1.0" balance="1.0" type_subscription="typeSubscriptionTest1" evoluations_number="1"
+    status_admin="1" status_contract="true" status_filling="true" status_payment="1" 
+    status_published="true" org_id="1"/>
+</dataset>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="dbxsd/dataset.xsd">
+
+     <topics topic_id="1" name="1" />
+     
+     <topics topic_id="2" name="1" />
+     
+     <topics topic_id="3" name="1" />
+	
+	<customers custmer_id="1" name="1" phone="1" phone_model="1" />
+	
+	
+	<inquiries inquiry_id="1" create_date="2016-05-03" description="10" rezalt="1" customer_id="1"
+	topic_id="1" />
+	
+  <inquiries inquiry_id="2" create_date="2016-04-02" description="10" rezalt="1" customer_id="1"
+	topic_id="1" />
+	
+	<inquiries inquiry_id="3" create_date="2016-04-02" description="10" rezalt="1" customer_id="1"
+	topic_id="3" />
+     
+</dataset>

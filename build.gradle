@@ -1,0 +1,51 @@
+apply from: "./libs.gradle"
+   
+subprojects { 
+	group='ita.support'
+	version=current_version
+	
+	apply plugin: 'eclipse'
+	apply plugin: 'java'
+	sourceCompatibility='1.7'
+ //  
+  repositories {
+  		mavenLocal()
+  		mavenCentral()		
+		jcenter()
+  }
+  
+  // inject the common dependencies into each sub-project
+	dependencies {	
+	 compile libs.logging_slf_api	
+	 compile libs.logging_logback_classic
+	 
+	 compile libs.jackson_core
+	 compile libs.jackson_databind
+	 compile libs.jackson_annotations
+	 
+	 compile libs.commons_io
+	 compile libs.commons_lang
+
+	// compile libs.aspectj_rt
+	// compile libs.aspectj_weavere
+	// compile libs.aspectj_tools
+	// provided libs.logging_annotations
+	//	
+	//	testCompile( libs.junit )	
+
+	//	testRuntime( libs.log4j )
+	//	testRuntime( libs.javassist )	
+	
+	}	
+	
+	//--------main external setting file	
+	def mainSetting = System.getenv('SUPPORT_HOME')
+	if(mainSetting==null)
+		mainSetting = System.getenv('SUPPORT_HOME')+'/support'
+	
+	//--------for test env must be duplicate
+	tasks.withType(Test) {
+ 		systemProperty 'SUPPORT_HOME',
+  		mainSetting;  	
+   }
+}

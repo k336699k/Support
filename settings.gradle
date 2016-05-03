@@ -1,0 +1,10 @@
+include 'support-ws'
+include 'support-dba'
+include 'support-security'
+include 'support-utils'
+include 'support-admin'
+
+
+rootProject.children.each { project ->
+    project.buildFileName = "${project.name}.gradle"
+}

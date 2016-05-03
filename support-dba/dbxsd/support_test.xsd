@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns="support_test" targetNamespace="support_test">
+	<xsd:element name="dbmaintain_scripts" type="dbmaintain_scripts__type" />
+	<xsd:element name="users" type="users__type" />
+	<xsd:element name="topics" type="topics__type" />
+	<xsd:element name="inquiries" type="inquiries__type" />
+	<xsd:element name="customers" type="customers__type" />
+	<xsd:complexType name="dbmaintain_scripts__type">
+		<xsd:attribute name="succeeded" use="optional" />
+		<xsd:attribute name="file_last_modified_at" use="optional" />
+		<xsd:attribute name="executed_at" use="optional" />
+		<xsd:attribute name="checksum" use="optional" />
+		<xsd:attribute name="file_name" use="optional" />
+		<xsd:attribute name="version" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="users__type">
+		<xsd:attribute name="username" use="optional" />
+		<xsd:attribute name="status" use="optional" />
+		<xsd:attribute name="email" use="optional" />
+		<xsd:attribute name="name" use="optional" />
+		<xsd:attribute name="role" use="optional" />
+		<xsd:attribute name="user_id" use="optional" />
+		<xsd:attribute name="password" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="topics__type">
+		<xsd:attribute name="name" use="optional" />
+		<xsd:attribute name="topic_id" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="inquiries__type">
+		<xsd:attribute name="create_date" use="optional" />
+		<xsd:attribute name="description" use="optional" />
+		<xsd:attribute name="inquiry_id" use="optional" />
+		<xsd:attribute name="rezalt" use="optional" />
+		<xsd:attribute name="topic_id" use="optional" />
+		<xsd:attribute name="customer_id" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="customers__type">
+		<xsd:attribute name="phone" use="optional" />
+		<xsd:attribute name="name" use="optional" />
+		<xsd:attribute name="custmer_id" use="optional" />
+		<xsd:attribute name="phone_model" use="optional" />
+	</xsd:complexType>
+</xsd:schema>

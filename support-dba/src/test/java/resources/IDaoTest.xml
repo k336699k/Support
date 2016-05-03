@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="dbxsd/dataset.xsd">
+
+	<client idClient="7" login="wolthrax" password="1234"
+		email="wolthrax@gmail.com" phoneNumber="123456789" fullName="Maxim" />
+</dataset>

@@ -1,0 +1,68 @@
+apply plugin: 'war'
+apply plugin: 'com.bmuschko.cargo'
+apply plugin: 'com.bmuschko.cargo-base'
+
+import com.bmuschko.gradle.cargo.tasks.remote.CargoRedeployRemote
+
+
+buildscript {
+	repositories {  jcenter() }
+	dependencies {  classpath 'com.bmuschko:gradle-cargo-plugin:2.2.1' }
+}
+
+dependencies{	
+	 compile project(':support-dba')
+	 compile project(':support-security')
+	 compile project(':support-admin')
+	 compile project(':support-utils')
+	 // compile project(':fixtime-client')
+	 
+	 //Spring
+	 compile libs.spring_aop	
+	 compile libs.spring_mvc
+	 compile libs.spring_context
+	 compile libs.file_upload	
+	 compile libs.commons_io
+	 compile libs.json	 
+
+	 testCompile libs.mockito
+     testCompile libs.spring_test
+     testCompile libs.junit
+	 testCompile libs.json_path
+	 testCompile libs.dbunit
+	 testCompile libs.json_path_assert
+	 testCompile libs.unitils_spring
+	 testCompile libs.unitils_dbunit
+	 testCompile libs.unitils_io
+	 testCompile libs.unitils_core
+	 
+	 //compile libs.aspectj_rt
+	 //compile libs.aspectj_weavere
+	
+	 //javaxee
+	 providedCompile libs.servlet_api
+	 }
+	 
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+}
+//
+cargo {
+	containerId = deploy_server_id
+	port = Integer.parseInt(deploy_server_port)
+	deployable { context = deploy_remote_context }
+	remote {
+		hostname = deploy_remote_host
+		username = deploy_remote_user
+		password = deploy_remote_password
+	}
+	 local {
+        homeDir = file(System.getenv('CATALINA_HOME'))
+        outputFile = file('build/localTomcat.log')
+        timeout = 60000      
+    }
+    
+    cargoRunLocal.dependsOn assemble
+    cargoRedeployRemote.dependsOn build
+}
+ 

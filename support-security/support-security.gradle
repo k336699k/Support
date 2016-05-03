@@ -1,0 +1,13 @@
+dependencies{	
+	 compile project(':support-dba')	
+//Spring	 
+	 compile libs.spring_mvc
+	 compile libs.spring_context
+	 
+ //Security
+	 compile libs.spring_security_core
+	 compile libs.spring_security_web
+	 compile libs.spring_security_config	
+	 
+	 compile libs.servlet_api
+	 }

@@ -1,0 +1,7 @@
+.*
+bin/
+build/
+null/
+!.gitignore
+/classes
+*.iml

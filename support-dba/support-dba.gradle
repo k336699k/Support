@@ -1,0 +1,18 @@
+dependencies{
+
+	compile project(':support-utils')
+	compile libs.hibernate_core
+	compile libs.mysql_connector
+	compile libs.spring_context
+	compile libs.spring_tx
+	compile libs.spring_orm
+	compile libs.spring_jdbc
+	compile libs.dbcp
+	compile libs.hibernate_entitymanager
+	compile libs.file_upload
+	compile libs.spring_mvc
+	
+	testCompile libs.unitils_spring
+	testCompile	libs.unitils_dbunit
+	testCompile libs.unitils_io
+}

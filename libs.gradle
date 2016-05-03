@@ -1,0 +1,81 @@
+ ext {
+ 	// 	
+    junitVersion = '4.11'
+    springVersion = '4.2.1.RELEASE'
+	springSecurityVersion = '4.0.3.RELEASE'
+    hibernateVersion = '4.3.11.Final'
+    unitilsVersion = '3.4.2'
+        
+    //dependencies
+    libs = [
+ /*
+ * Spring 
+ */	
+	spring_aop: "org.springframework:spring-aop:${springVersion}",	
+	spring_mvc: "org.springframework:spring-webmvc:${springVersion}",
+	spring_context: "org.springframework:spring-context:${springVersion}",
+	spring_orm: "org.springframework:spring-orm:${springVersion}",
+	spring_tx: "org.springframework:spring-tx:${springVersion}",
+	spring_web:"org.springframework:spring-web:${springVersion}",
+	spring_mock:"org.springframework:spring-mock:2.0.8",
+	spring_jdbc: "org.springframework:spring-jdbc:${springVersion}",
+	dbcp: "org.apache.commons:commons-dbcp2:2.1.1",
+	//Security
+	spring_security_core: "org.springframework.security:spring-security-core:${springSecurityVersion}",
+    spring_security_web: "org.springframework.security:spring-security-web:${springSecurityVersion}",
+    spring_security_config: "org.springframework.security:spring-security-config:${springSecurityVersion}",
+	
+	//AspectJ
+	aspectj_rt: 'org.aspectj:aspectjrt:1.8.6',
+	aspectj_weavere: 'org.aspectj:aspectjweaver:1.8.6',
+	aspectj_tools: 'org.aspectj:aspectjtools:1.8.7',
+	
+	
+ /*
+ * Hibernate 
+ */
+ 	hibernate_core: "org.hibernate:hibernate-core:${hibernateVersion}", 	
+ 	hibernate_ehcache: "org.hibernate:hibernate-ehcache:${hibernateVersion}", 
+ 	hibernate_entitymanager: "org.hibernate:hibernate-entitymanager:${hibernateVersion}", 	
+ 	hibernate_validator: "org.hibernate:hibernate-validator:4.3.2.Final",
+ 	mysql_connector: "mysql:mysql-connector-java:5.1.36", 	
+
+ /*
+ * Logging
+ */
+ 	logging_slf_api: 'org.slf4j:slf4j-api:1.7.12',  
+ 	logging_logback_classic: 'ch.qos.logback:logback-classic:1.1.3',
+ 
+ /*
+ * Other 
+ */
+ 	commons_io: 'commons-io:commons-io:2.4',
+ 	commons_lang: 'commons-lang:commons-lang:2.6',
+ 	file_upload: 'commons-fileupload:commons-fileupload:1.3.1',
+ 	servlet_api: 'javax.servlet:javax.servlet-api:3.1.0',
+ 	jackson_core: 'com.fasterxml.jackson.core:jackson-core:2.6.2',
+ 	jackson_databind: 'com.fasterxml.jackson.core:jackson-databind:2.6.2',
+ 	jackson_annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.6.2',
+ /*
+ * Testing 
+ */
+ 
+	unitils_spring: "org.unitils:unitils-spring:${unitilsVersion}",
+ 	unitils_dbunit: "org.unitils:unitils-dbunit:${unitilsVersion}",
+ 	unitils_io: "org.unitils:unitils-io:${unitilsVersion}",
+ 	unitils_core: "org.unitils:unitils-core:${unitilsVersion}",
+ 	
+ 	spring_test: "org.springframework:spring-test:${springVersion}",
+ 	mockito: "org.mockito:mockito-core:1.9.5",
+ 	junit: 'junit:junit:4.11',
+ 	json_path: 'com.jayway.jsonpath:json-path:2.0.0',
+ 	json_path_assert: 'com.jayway.jsonpath:json-path-assert:0.8.1',
+ 	dbunit: 'org.dbunit:dbunit:2.5.1',
+ 	
+ /*
+ *json
+ */
+	json: 'com.google.code.gson:gson:2.3.1'
+   
+ ]
+ }
